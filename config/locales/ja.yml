@@ -1,0 +1,10 @@
+ja:
+ activerecord:
+  models:
+   plan: スケジュール
+  attributes:
+   plan:
+    title: タイトル
+    startday: 開始日
+    finishday: 終了日
+    
