@@ -1,0 +1,36 @@
+<h3>スケジュール詳細</h3>
+
+<table>
+    <tr>
+        <th>タイトル</th>
+        <td><%=@plan.title%></td>
+    </tr>
+    <tr>
+        <th>開始日</th>
+        <td><%=@plan.startday.strftime('%Y年%m月%d日')%></td>
+    </tr>
+    <tr>
+        <th>終了日</th>
+        <td><%=@plan.finishday.strftime('%Y年%m月%d日')%></td>
+    </tr>
+    <tr>
+        <th>終日</th>
+        <% if @plan.allday=='1'%>
+            <td>○</td>
+        <% else%>
+            <td></td>
+        <%end%>
+    </tr>
+    <tr>
+        <th>スケジュールメモ</th>
+        <td><%=@plan.planmemo%></td>
+    </tr>
+</table>
+
+<div>
+    <ul>
+        <li><%=link_to "スケジュール一覧に戻る",plans_path%></li>
+        <li><%=link_to "スケジュールを編集する",edit_plan_path%></li>
+        <li><%=link_to "スケジュールを削除",plan_path,method: :delete,data:{confirm:"本当に削除しますか？"}%></li>
+    </ul>
+</div>
